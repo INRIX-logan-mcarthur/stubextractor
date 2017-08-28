@@ -59,3 +59,5 @@ typings/
 
 # OS Specific files
 .DS_store
+
+.idea/
