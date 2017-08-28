@@ -24,3 +24,15 @@ There are also concerns that private functions and variables could be exposed, a
 
 It is recommended to load the stubbed files into an IDE and run a code inspection on them. Doing so should reveal any syntax errors that have crept in due to the parser.
 
+# Configuring Libraries
+
+The stub files are meant to be used as a library to assist in IDE Code Completion.
+
+## Webstorm
+
+With the Webstorm window active, go to: 
+
+`Webstorm -> Preferences -> Languages & Frameworks -> JavaScript -> Libraries`
+
+From there you can Add a new library and include the folder of stub files. You can also set the library to be available to the project only or to the entire workspace.
+
