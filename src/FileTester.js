@@ -6,10 +6,10 @@ let filePrint = require('./StubExtraction/FilePrinter.js');
 
 fs = require('fs');
 
-let testFile = "Enum";
+let testFile = "AudioPlayer";
 
-let inputFile = "../testFiles/oneoffs/" + testFile + ".js";
-let outputFile = "../output/oneoffs/" + testFile + ".js";
+let inputFile = "../test/" + testFile + ".js";
+let outputFile = "../output/" + testFile + ".js";
 
 let docText = fs.readFileSync(inputFile, "utf8");
 let documentArray = docText.split("\n");

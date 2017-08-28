@@ -49,7 +49,7 @@ function recurseDirectory(targetDir, outputDir, depth)
     }
     if (!fs.existsSync(outputDir))
     {
-        fs.mkDirSync(outputDir);
+        fs.mkdirSync(outputDir);
     }
     if (fs.existsSync(targetDir))
     {

@@ -60,6 +60,7 @@ let utils = require('./Utility Functions.js');
  * @property {string} declaration
  */
 
+// TODO Extend VarDeclaration to be able to take memberProperties and memberFunctions
 /**
  * @typedef {object} VarDeclaration
  * @property {CommentBlock} comment
