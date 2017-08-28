@@ -442,7 +442,6 @@ class FileProcessor {
                 continue;
             }
             else {
-                // TODO Make sure that if I change it to a brace appearing, then it will skip, and don't let it mess stuff up
                 //if (line.endsWith("{"))
                 if (utils.isIn(line, "{")) {
                     let endPoint = utils.getClosingBrace(documentArray, index, documentArray[index].lastIndexOf("{")).lineIndex;
@@ -551,10 +550,7 @@ class FileProcessor {
          * @type {FunctionDeclaration[]} looseFunctions
          */
         let looseFunctions = [];
-        /**
-         * @type {CommentBlock[]}
-         */
-        //let docComments = [];
+
         /**
          * @type {VarDeclaration[]}
          */
@@ -607,8 +603,6 @@ class FileProcessor {
                 let comment = this.getMatchedComment(lineIndex, looseTags);
                 let classBlock = this.extractClassBlock(documentArray, lineIndex);
 
-
-
                 let splitText = classBlock.declaration.split(/\s*class\s*/);
 
                 let classSplit = splitText[1].split(/\s+/);
@@ -638,7 +632,6 @@ class FileProcessor {
 
             /////////////////////////////////
 
-            // TODO Maybe eventually we can do fancy return types
             if (line.startsWith("var") || line.startsWith("const") || line.startsWith("let")) {
 
                 if (!line.endsWith("{")) {
@@ -743,7 +736,6 @@ class FileProcessor {
 
             ////////////////////
 
-            // TODO Make sure that this doesn't go crazy leaving out too much stuff
             if (line.endsWith("{") && !utils.isIn(line, "define") && !line.startsWith("function") && !line.startsWith("(function"))//!utils.isIn(line, "function"))
             {
                 lineIndex = utils.getClosingBrace(documentArray, lineIndex, documentArray[lineIndex].lastIndexOf("{")).lineIndex;

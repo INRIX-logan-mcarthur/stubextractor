@@ -47,6 +47,10 @@ function recurseDirectory(targetDir, outputDir, depth)
         console.log("Reached maximum depth before completion.");
         return;
     }
+    if (!fs.existsSync(outputDir))
+    {
+        fs.mkDirSync(outputDir);
+    }
     if (fs.existsSync(targetDir))
     {
         let files = fs.readdirSync(targetDir, "utf8");
